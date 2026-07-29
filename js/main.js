@@ -57,9 +57,11 @@ if (!reduceMotion && parallaxEls.length) {
   function updateParallax() {
     const viewportH = window.innerHeight;
     for (const img of parallaxEls) {
-      const rect = img.parentElement.getBoundingClientRect();
+      const parent = img.parentElement;
+      const rect = parent.getBoundingClientRect();
       const progress = (rect.top + rect.height / 2 - viewportH / 2) / viewportH;
-      const shift = progress * -40; // px of vertical drift
+      const strength = Number(parent.dataset.parallaxStrength) || 40; // px of vertical drift
+      const shift = progress * -strength;
       img.style.transform = `translateY(${shift}px)`;
     }
     ticking = false;
