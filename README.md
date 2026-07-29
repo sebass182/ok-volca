@@ -1,12 +1,30 @@
 # OK VOLCA
 
-Static one-page site for OK VOLCA, metal mélodique band from Saint-Jean-sur-Richelieu, Québec.
+Official site for OK VOLCA, metal mélodique band from Saint-Jean-sur-Richelieu, Québec.
+React + TypeScript + Vite + Tailwind.
 
 ## Structure
 
-- `index.html` — page content
-- `css/style.css` — styles (ember/volcano theme, glitch title, responsive layout)
-- `js/main.js` — tracklist toggle + canvas ember particle background
-- `serve.ps1` — tiny local static server for previewing (`powershell -File serve.ps1`, then open http://localhost:8532)
+- `src/App.tsx` — page composition
+- `src/components/` — one component per section (Hero, HistorySection, ShowHistorySection, MusicVideosSection, DiscographySection, BandSection, ContactSection, Footer, VideoModal)
+- `src/data/bandData.ts` — all real band content (bio, discography, members, show history, links) in one place
+- `src/assets/images/` — real photos and album covers, imported as modules so Vite bundles them correctly
 
-No build step, no dependencies — just open `index.html` or serve the folder.
+## Develop
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build   # outputs to dist/
+npm run preview # serve the production build locally
+```
+
+## Deploy
+
+Pushing to `master` triggers `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages
+(configured for Actions-based deployment, not branch-based).
