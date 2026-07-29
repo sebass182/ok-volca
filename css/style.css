@@ -201,11 +201,10 @@ img{ max-width: 100%; }
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  gap: clamp(0.75rem, 2vw, 1.25rem);
 }
-.live__photo{ height: 78vh; }
-.live__photo--left img{ object-position: 22% 40%; }
-.live__photo--right img{ object-position: 82% 40%; }
+.live__photo{ height: 100vh; }
+.live__photo--left img{ object-position: center 32%; }
+.live__photo--right img{ object-position: center 38%; }
 
 .parallax figcaption{
   position: absolute;

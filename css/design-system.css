@@ -123,6 +123,14 @@ body{
   position: relative;
   overflow: hidden;
 }
+.parallax__frame{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform: scale(1.12);
+  transition: transform 1.4s var(--ease);
+}
+.parallax.is-visible .parallax__frame{ transform: scale(1); }
 .parallax img{
   position: absolute;
   top: -12%;
@@ -141,7 +149,7 @@ body{
 .parallax--boost:hover img{ filter: grayscale(0%) contrast(1.05) brightness(1.4); }
 
 /* Oversized image for a more dramatic scroll-driven drift range */
-.parallax--big img{ top: -14%; height: 128%; }
+.parallax--big img{ top: -6%; height: 112%; }
 
 /* ---------- Scroll reveal ---------- */
 
