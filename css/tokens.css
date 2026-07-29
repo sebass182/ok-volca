@@ -1,59 +1,39 @@
 /* =====================================================================
    OK VOLCA — Design tokens
-   Single source of truth for color, type, spacing and radius.
-   Nothing in here is page-specific — see design-system.css for
-   components and style.css for page layout.
+   Monochrome, black-canvas theme. Nothing here is page-specific —
+   see design-system.css for components and style.css for page layout.
    ===================================================================== */
 
 :root{
   /* ---- Color: surfaces ---- */
-  --c-bg:          #F4F2EA;   /* page background, warm off-white */
-  --c-surface:     #FFFFFF;   /* cards, chips, tabs */
-  --c-panel:       #0A0A0A;   /* black hero / footer panels */
+  --c-bg:      #0A0A0A;  /* page background — near-black */
+  --c-surface: #111111;  /* very slightly raised panels (rare) */
 
   /* ---- Color: text ---- */
-  --c-ink:         #111111;   /* primary text on light surfaces */
-  --c-ink-soft:    #55534C;   /* secondary / body text on light surfaces */
-  --c-stone:       #8A897F;   /* tertiary / meta text */
-  --c-on-panel:    #F4F2EA;   /* primary text on black panels */
-  --c-on-panel-soft: #9A988E; /* secondary text on black panels */
+  --c-ink:      #F5F5F0;  /* primary text */
+  --c-ink-soft: rgba(245,245,240,0.62); /* secondary / meta text */
+  --c-ink-faint: rgba(245,245,240,0.38); /* tertiary text */
 
   /* ---- Color: lines ---- */
-  --c-border:      #111111;  /* thin black borders on cards/chips/buttons */
-  --c-border-soft: #DAD7C9;  /* faint dividers on light surfaces */
-  --c-border-panel: rgba(244,242,234,0.18);
-
-  /* ---- Color: accent ---- */
-  --c-accent:      #E1FF4A;  /* chartreuse — CTAs, active tabs, highlights */
-  --c-accent-ink:  #0A0A0A;  /* text/icons on accent */
+  --c-line: rgba(245,245,240,0.16);
+  --c-line-strong: rgba(245,245,240,0.32);
 
   /* ---- Typography ---- */
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-body: "Manrope", "Segoe UI", sans-serif;
-  /* Every axis must be listed — font-variation-settings replaces the
-     whole set, so a partial value silently resets wght/opsz to default
-     and the display font goes thin. opsz maxed for the sharpest, most
-     high-contrast display cut; SOFT low keeps it crisp, not rounded. */
-  --font-display-settings: "opsz" 144, "wght" 900, "SOFT" 0, "WONK" 1;
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Archivo", "Segoe UI", sans-serif;
 
-  --fs-hero:     clamp(3.4rem, 11vw, 8rem);
-  --fs-h1:       clamp(2.2rem, 6vw, 4.2rem);
-  --fs-h2:       clamp(1.6rem, 3.6vw, 2.4rem);
-  --fs-eyebrow:  0.85rem;
+  --fs-wordmark: clamp(3.5rem, 15vw, 11rem);
+  --fs-h1:       clamp(2rem, 5vw, 3.4rem);
+  --fs-h2:       clamp(1.4rem, 3vw, 2rem);
+  --fs-eyebrow:  0.78rem;
   --fs-body:     1.05rem;
   --fs-small:    0.85rem;
 
-  /* ---- Radius ---- */
-  --r-sm: 8px;                 /* buttons, pills, chips */
-  --r-md: 14px;                /* stat notes, small cards */
-  --r-lg: 22px;                /* portfolio / album / member cards */
-  --r-photo: 84px 22px 84px 22px; /* asymmetric "organic" photo frame */
-
   /* ---- Spacing ---- */
-  --space-section: clamp(4rem, 9vw, 7rem);
+  --space-section: clamp(5rem, 12vw, 9rem);
   --space-gap: clamp(1.5rem, 3vw, 2.5rem);
 
-  /* ---- Shadow ---- */
-  --shadow-card: 0 20px 40px -28px rgba(10,10,10,0.28);
-  --shadow-card-hover: 0 26px 48px -24px rgba(10,10,10,0.38);
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --reveal-duration: 900ms;
 }

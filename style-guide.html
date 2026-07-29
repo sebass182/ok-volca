@@ -7,120 +7,107 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/design-system.css">
 <style>
-  .sg-section{ max-width: 1100px; margin: 0 auto; padding: 3.5rem 5vw; border-bottom: 1.5px solid var(--c-border-soft); }
-  .sg-section h2{ font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .sg-section{ max-width: 1100px; margin: 0 auto; padding: 3.5rem 5vw; border-bottom: 1px solid var(--c-line); }
+  .sg-section h2{ font-family: var(--font-display); font-weight: 900; font-size: 1.6rem; margin-bottom: 0.5rem; }
   .sg-section p.desc{ color: var(--c-ink-soft); margin-bottom: 2rem; max-width: 60ch; }
-  .sg-row{ display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .sg-row{ display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: center; }
   .sg-swatches{ display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
-  .swatch{ border: 1.5px solid var(--c-border); border-radius: var(--r-md); overflow: hidden; }
+  .swatch{ border: 1px solid var(--c-line); border-radius: 6px; overflow: hidden; }
   .swatch__color{ height: 70px; }
-  .swatch__label{ padding: 0.6rem 0.8rem; font-size: 0.8rem; font-family: monospace; background: var(--c-surface); }
-  .sg-notes-row{ display: flex; gap: 1.6rem; flex-wrap: wrap; }
-  .sg-notes-row .note{ width: 200px; }
+  .swatch__label{ padding: 0.6rem 0.8rem; font-size: 0.78rem; font-family: monospace; }
   .sg-photos-row{ display: flex; gap: 1.6rem; flex-wrap: wrap; }
-  .sg-photos-row .photo-frame{ width: 220px; height: 240px; }
-  .sg-cover{ background: var(--c-panel); color: var(--c-on-panel); padding: 4rem 5vw; text-align: center; }
-  .sg-cover .eyebrow-text{ color: var(--c-accent); }
-  code.tok{ font-family: monospace; background: var(--c-surface); border: 1px solid var(--c-border-soft); border-radius: 4px; padding: 0.1rem 0.4rem; }
+  .sg-photos-row .parallax{ width: 220px; height: 260px; position: relative; }
+  .sg-photos-row .parallax img{ position: static; width: 100%; height: 100%; }
+  .sg-cover{ padding: 4rem 5vw; }
+  code.tok{ font-family: monospace; background: var(--c-surface); border: 1px solid var(--c-line); border-radius: 4px; padding: 0.1rem 0.4rem; }
 </style>
 </head>
 <body>
 
 <div class="sg-cover">
   <p class="eyebrow-text">OK VOLCA</p>
-  <h1 class="display-xl" style="font-size:clamp(2.4rem,6vw,4rem);">Design system</h1>
-  <p style="color:var(--c-on-panel-soft); margin-top:1rem;">Tokens + components used across the site. Edit <code class="tok">css/tokens.css</code> to retheme everything below.</p>
+  <h1 class="wordmark" style="font-size:clamp(2.4rem,8vw,5rem);">Design system</h1>
+  <p style="color:var(--c-ink-soft); margin-top:1rem; max-width: 60ch;">Tokens + composants monochromes utilisés sur le site. Modifiez <code class="tok">css/tokens.css</code> pour tout rethémer.</p>
 </div>
 
 <section class="sg-section">
   <h2>Couleurs</h2>
-  <p class="desc">Surfaces claires, panneaux noirs, et un seul accent chartreuse utilisé avec parcimonie pour les CTA et les états actifs.</p>
+  <p class="desc">Un canevas presque noir, du texte presque blanc, et deux niveaux d'opacité pour le texte secondaire. Aucune couleur d'accent &mdash; le contraste vient du poids typographique et des filets.</p>
   <div class="sg-swatches">
     <div class="swatch"><div class="swatch__color" style="background:var(--c-bg)"></div><div class="swatch__label">--c-bg</div></div>
     <div class="swatch"><div class="swatch__color" style="background:var(--c-surface)"></div><div class="swatch__label">--c-surface</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-panel)"></div><div class="swatch__label" style="color:#fff;background:var(--c-panel)">--c-panel</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-ink)"></div><div class="swatch__label">--c-ink</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-ink-soft)"></div><div class="swatch__label">--c-ink-soft</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-stone)"></div><div class="swatch__label">--c-stone</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-accent)"></div><div class="swatch__label">--c-accent</div></div>
-    <div class="swatch"><div class="swatch__color" style="background:var(--c-border-soft)"></div><div class="swatch__label">--c-border-soft</div></div>
+    <div class="swatch"><div class="swatch__color" style="background:var(--c-ink)"></div><div class="swatch__label" style="color:#000;">--c-ink</div></div>
+    <div class="swatch"><div class="swatch__color" style="background:#3a3a36"></div><div class="swatch__label">--c-ink-soft (62%)</div></div>
+    <div class="swatch"><div class="swatch__color" style="background:#222220"></div><div class="swatch__label">--c-ink-faint (38%)</div></div>
+    <div class="swatch"><div class="swatch__color" style="background:#2a2a28"></div><div class="swatch__label">--c-line (16%)</div></div>
   </div>
 </section>
 
 <section class="sg-section">
   <h2>Typographie</h2>
-  <p class="desc"><code class="tok">Fraunces</code> (900, wonky) pour les titres, <code class="tok">Manrope</code> pour le corps de texte et l'interface.</p>
-  <p class="eyebrow-text" style="margin-bottom:1rem;">Eyebrow / label — .eyebrow-text</p>
-  <h3 class="display-xl" style="font-size:clamp(2.4rem,6vw,4.5rem); margin-bottom:1.5rem;">Display XL</h3>
-  <h3 class="display-lg" style="margin-bottom:1.5rem;">Display Large<br><span>avec ligne décalée</span></h3>
-  <h3 class="display-md" style="margin-bottom:1.5rem;">Display Medium — sous-titres de section</h3>
-  <p style="max-width:60ch;">Corps de texte en Manrope, pour la lisibilité des paragraphes longs comme la biographie ou les descriptions d'albums.</p>
+  <p class="desc"><code class="tok">Archivo Black</code> pour les titres et le wordmark, <code class="tok">Archivo</code> pour le corps de texte et l'interface.</p>
+  <p class="eyebrow-text" style="margin-bottom:1.5rem;">Eyebrow / label &mdash; .eyebrow-text</p>
+  <h3 class="wordmark" style="font-size:clamp(2.2rem,7vw,4.5rem); margin-bottom:2rem;">Wordmark</h3>
+  <h3 class="display-h1" style="margin-bottom:1.5rem;">Display H1 &mdash; titres de section</h3>
+  <h3 class="display-h2" style="margin-bottom:1.5rem;">Display H2 &mdash; sous-titres</h3>
+  <p style="max-width:60ch; color:var(--c-ink-soft);">Corps de texte en Archivo, pour la lisibilité des paragraphes longs comme la biographie ou les descriptions d'albums.</p>
 </section>
 
 <section class="sg-section">
-  <h2>Boutons &amp; pills</h2>
-  <p class="desc">Bordure noire fine, coins légèrement arrondis (<code class="tok">--r-sm</code>), jamais de forme pilule pleine — cohérent avec les chips et les onglets.</p>
-  <div class="sg-row" style="margin-bottom:1.5rem;">
-    <a class="btn btn--accent" href="#">Bouton accent &nearr;</a>
-    <a class="btn" href="#">Bouton secondaire</a>
-    <a class="btn btn--accent btn--lg" href="#">Grand bouton</a>
+  <h2>Liens texte</h2>
+  <p class="desc">Pas de boutons pleins, pas de coins arrondis &mdash; juste un soulignement qui se déploie au survol.</p>
+  <div class="sg-row">
+    <a class="text-link" href="#">Lien standard</a>
+    <a class="text-link text-link--lg" href="#">okvolca@gmail.com</a>
   </div>
-  <div class="sg-row" style="margin-bottom:1.5rem;">
-    <span class="pill">Pill / tag</span>
-    <span class="chip">Chip dispersée</span>
-  </div>
-  <div class="tabs">
+</section>
+
+<section class="sg-section">
+  <h2>Onglets</h2>
+  <p class="desc">Texte simple avec un filet inférieur qui s'active &mdash; utilisé pour basculer entre les albums.</p>
+  <div class="discographie__tabs" style="margin:0;">
     <button class="tab active">Onglet actif</button>
     <button class="tab">Onglet inactif</button>
   </div>
 </section>
 
 <section class="sg-section">
-  <h2>Bandeau défilant (ticker)</h2>
-  <p class="desc">Fond accent, texte noir, boucle CSS infinie — utilisé comme séparateur entre le hero et le contenu.</p>
-  <div class="ticker">
-    <div class="ticker__track">
-      <span>Exemple</span><span class="ticker__mark">&#10022;</span>
-      <span>De bandeau</span><span class="ticker__mark">&#10022;</span>
-      <span>Défilant</span><span class="ticker__mark">&#10022;</span>
-      <span>Exemple</span><span class="ticker__mark">&#10022;</span>
-      <span>De bandeau</span><span class="ticker__mark">&#10022;</span>
-      <span>Défilant</span><span class="ticker__mark">&#10022;</span>
-    </div>
+  <h2>Rangée méta (hero)</h2>
+  <p class="desc">Trois colonnes séparées par un filet &mdash; lieu, libellé + titre, année.</p>
+  <div class="meta-row">
+    <div class="meta-row__left">Saint-Jean-sur-Richelieu, QC</div>
+    <div class="meta-row__center"><span class="meta-row__label">Depuis 2005</span><span class="display-h2">Metal mélodique</span></div>
+    <div class="meta-row__right">2024</div>
   </div>
 </section>
 
 <section class="sg-section">
-  <h2>Notes (cartes statistiques)</h2>
-  <p class="desc">Cartes légèrement pivotées façon papillon adhésif, une variante accent par groupe.</p>
-  <div class="sg-notes-row">
-    <div class="note" style="transform:rotate(-2deg);"><span class="note__num">01</span><span class="note__label">Étiquette de la carte</span></div>
-    <div class="note note--accent" style="transform:rotate(1.5deg);"><span class="note__num">02</span><span class="note__label">Variante accent</span></div>
-    <div class="note" style="transform:rotate(-1deg);"><span class="note__num">03</span><span class="note__label">Étiquette de la carte</span></div>
+  <h2>Rangées à filet (line-row)</h2>
+  <p class="desc">Pour les listes simples &mdash; jalons, crédits, données tabulaires.</p>
+  <div style="max-width:500px;">
+    <div class="line-row"><strong>Élément un</strong><span style="color:var(--c-ink-soft);">Détail</span></div>
+    <div class="line-row"><strong>Élément deux</strong><span style="color:var(--c-ink-soft);">Détail</span></div>
+    <div class="line-row"><strong>Élément trois</strong><span style="color:var(--c-ink-soft);">Détail</span></div>
   </div>
 </section>
 
 <section class="sg-section">
-  <h2>Cadres photo (niveaux de gris &rarr; couleur)</h2>
-  <p class="desc">Coins asymétriques (<code class="tok">--r-photo</code>), image en niveaux de gris au repos, couleur au survol.</p>
+  <h2>Photos parallax (niveaux de gris &rarr; couleur)</h2>
+  <p class="desc">Image légèrement sur-dimensionnée, décalée en JS selon le défilement, niveaux de gris au repos et couleur au survol.</p>
   <div class="sg-photos-row">
-    <figure class="photo-frame"><img src="img/band-live.jpg" alt="Exemple"></figure>
-    <figure class="photo-frame" style="border-radius:22px 84px 22px 84px;"><img src="img/band-live.jpg" alt="Exemple, coins inversés"></figure>
+    <figure class="parallax"><img src="img/band-onstage.jpg" alt="Exemple"></figure>
+    <figure class="parallax"><img src="img/band-portrait.jpg" alt="Exemple"></figure>
   </div>
 </section>
 
 <section class="sg-section" style="border-bottom:none;">
-  <h2>Listes à ligne (list-row)</h2>
-  <p class="desc">Pour les données tabulaires simples — membres, dates, crédits.</p>
-  <div style="max-width:500px;">
-    <div class="list-row"><strong>Élément un</strong><span style="color:var(--c-stone);">Détail</span></div>
-    <div class="list-row"><strong>Élément deux</strong><span style="color:var(--c-stone);">Détail</span></div>
-    <div class="list-row"><strong>Élément trois</strong><span style="color:var(--c-stone);">Détail</span></div>
-  </div>
+  <h2>Révélation au défilement</h2>
+  <p class="desc">Ajoutez <code class="tok">.reveal</code> à un élément : <code class="tok">js/main.js</code> ajoute <code class="tok">.is-visible</code> via IntersectionObserver quand il entre dans le viewport.</p>
+  <div class="reveal is-visible" style="border:1px solid var(--c-line); padding:1.5rem; max-width:400px;">Cet élément est déjà visible.</div>
 </section>
 
 </body>

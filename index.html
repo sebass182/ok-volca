@@ -8,7 +8,7 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/design-system.css">
 <link rel="stylesheet" href="css/style.css">
@@ -18,81 +18,58 @@
 <header class="nav">
   <a class="nav__logo" href="#top">OK VOLCA</a>
   <nav class="nav__links">
-    <a href="#bio">Histoire</a>
     <a href="#discographie">Discographie</a>
-    <a href="#membres">Membres</a>
-    <a href="#live">Sur scène</a>
+    <a href="#contact">Contact</a>
   </nav>
-  <a class="btn btn--accent nav__cta" href="#contact">Contact</a>
 </header>
 
 <main>
 
   <section class="hero" id="top">
-    <p class="hero__eyebrow eyebrow-text">Metal mélodique &middot; Saint-Jean-sur-Richelieu, QC</p>
-    <h1 class="hero__title">OK VOLCA</h1>
-    <p class="hero__since">Groupe de metal, depuis 2005</p>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>Hardcore</span><span class="ticker__mark">&#10022;</span>
-      <span>Metal mélodique</span><span class="ticker__mark">&#10022;</span>
-      <span>Saint-Jean-sur-Richelieu</span><span class="ticker__mark">&#10022;</span>
-      <span>Depuis 2005</span><span class="ticker__mark">&#10022;</span>
-      <span>Hardcore</span><span class="ticker__mark">&#10022;</span>
-      <span>Metal mélodique</span><span class="ticker__mark">&#10022;</span>
-      <span>Saint-Jean-sur-Richelieu</span><span class="ticker__mark">&#10022;</span>
-      <span>Depuis 2005</span><span class="ticker__mark">&#10022;</span>
+    <div class="hero__spacer"></div>
+    <div class="meta-row">
+      <div class="meta-row__left">Saint-Jean-sur-Richelieu, QC</div>
+      <div class="meta-row__center">
+        <span class="meta-row__label">Depuis 2005</span>
+        <span class="display-h2">Metal mélodique</span>
+      </div>
+      <div class="meta-row__right">2024</div>
     </div>
-  </div>
-
-  <section class="showcase">
-    <div class="showcase__chips" aria-label="Vu et entendu sur">
-      <span class="chip chip--1">MusiquePlus</span>
-      <span class="chip chip--2">Rockfest de Montebello</span>
-      <span class="chip chip--3">Foufounes Électriques</span>
-      <span class="chip chip--4">Woodstock en Beauce</span>
-      <span class="chip chip--5">Spectrum de Montréal</span>
-      <span class="chip chip--6">Festival Sève</span>
+    <div class="hero__wordmark-wrap">
+      <h1 class="wordmark reveal" id="hero-wordmark">OK VOLCA</h1>
     </div>
-    <div class="showcase__cta">
-      <a class="btn btn--accent" href="https://okvolca.bandcamp.com/" target="_blank" rel="noopener">Écouter &nearr;</a>
-      <a class="btn" href="https://www.facebook.com/okvolca" target="_blank" rel="noopener">Facebook &#9658;</a>
-    </div>
-    <figure class="photo-frame showcase__photo">
-      <img src="img/band-live.jpg" alt="OK VOLCA en spectacle" loading="lazy">
-    </figure>
   </section>
 
   <section class="section bio" id="bio">
-    <h2 class="display-lg big-heading">Notre<br><span>histoire</span></h2>
+    <div class="section-head reveal"><span class="section-head__num">01</span><h2 class="display-h1">Notre histoire</h2></div>
     <div class="bio__grid">
-      <div class="bio__text">
+      <div class="bio__text reveal">
         <p>Avant d'être OK VOLCA, le quintette chantait en anglais sous le nom <strong>Haang Upps</strong>. Le virage vers le français a changé la donne&nbsp;: quelques titres ont grimpé au sommet des palmarès francophones sur MusiquePlus et sur les ondes de nombreuses radios indépendantes.</p>
         <p>Le premier album éponyme paraît en 2006 sous étiquette Slam Disques, suivi de <em>Fréquence Trémor</em> en 2011. Entre les deux, le groupe roule sa bosse à travers le Québec &mdash; du Rockfest de Montebello à Woodstock en Beauce, en passant par des salles mythiques comme les Foufounes Électriques et le Spectrum de Montréal.</p>
         <p>Puis, silence. Plus de dix ans passent. En mai 2024, OK VOLCA refait surface pour un retour remarqué au <strong>Festival Sève</strong>. La même année, le groupe boucle une boucle&nbsp;: un dernier concert avec Louis au chant, filmé à la boutique Rookery &mdash; une page qui se tourne après près de deux décennies de bruit et de fureur.</p>
       </div>
-      <div class="notes">
-        <div class="note"><span class="note__num">2005</span><span class="note__label">Formation, sous le nom Haang Upps</span></div>
-        <div class="note note--accent"><span class="note__num">2011</span><span class="note__label">Fréquence Trémor</span></div>
-        <div class="note"><span class="note__num">2024</span><span class="note__label">Retour au Festival Sève</span></div>
+      <div class="bio__facts reveal">
+        <div class="line-row"><span class="line-row__year">2005</span><span class="line-row__label">Formation, sous le nom Haang Upps</span></div>
+        <div class="line-row"><span class="line-row__year">2006</span><span class="line-row__label">Premier album éponyme, Slam Disques</span></div>
+        <div class="line-row"><span class="line-row__year">2011</span><span class="line-row__label">Fréquence Trémor</span></div>
+        <div class="line-row"><span class="line-row__year">2020</span><span class="line-row__label">&laquo;&nbsp;Ouvre toé les yeux&nbsp;&raquo;, avec Haang Upps</span></div>
+        <div class="line-row"><span class="line-row__year">2024</span><span class="line-row__label">Retour au Festival Sève</span></div>
       </div>
     </div>
   </section>
 
   <section class="section discographie" id="discographie">
-    <h2 class="display-lg big-heading big-heading--center">Notre<br><span>discographie</span></h2>
-    <div class="tabs" role="tablist" style="justify-content:center; margin-bottom: 2.5rem;">
+    <div class="section-head reveal"><span class="section-head__num">02</span><h2 class="display-h1">Discographie</h2></div>
+    <div class="discographie__tabs reveal">
       <button class="tab active" role="tab" aria-selected="true" data-album="eponyme">Éponyme &middot; 2006</button>
       <button class="tab" role="tab" aria-selected="false" data-album="tremor">Fréquence Trémor &middot; 2011</button>
     </div>
 
-    <article class="album-card" data-panel="eponyme">
-      <div class="album-card__art"><img src="img/cover-eponyme.jpg" alt="Pochette de l'album Éponyme"><i class="tag">2006</i></div>
-      <div class="album-card__info">
+    <article class="album reveal" data-panel="eponyme">
+      <figure class="album__art"><img src="img/cover-eponyme.jpg" alt="Pochette de l'album Éponyme"></figure>
+      <div class="album__info">
         <h3>Éponyme</h3>
-        <p class="album-card__meta">Slam Disques &middot; 13 pistes</p>
+        <p class="album__meta">Slam Disques &middot; 13 pistes</p>
         <button class="tracklist-toggle" aria-expanded="false">Voir les pistes</button>
         <ol class="tracklist">
           <li><span>Fléau Destructeur</span><time>3:56</time></li>
@@ -112,11 +89,11 @@
       </div>
     </article>
 
-    <article class="album-card" data-panel="tremor" hidden>
-      <div class="album-card__art album-card__art--alt"><img src="img/cover-tremor.jpg" alt="Pochette de l'album Fréquence Trémor"><i class="tag">2011</i></div>
-      <div class="album-card__info">
+    <article class="album reveal" data-panel="tremor" hidden>
+      <figure class="album__art"><img src="img/cover-tremor.jpg" alt="Pochette de l'album Fréquence Trémor"></figure>
+      <div class="album__info">
         <h3>Fréquence Trémor</h3>
-        <p class="album-card__meta">12 pistes</p>
+        <p class="album__meta">12 pistes</p>
         <button class="tracklist-toggle" aria-expanded="false">Voir les pistes</button>
         <ol class="tracklist">
           <li><span>Facteur temps</span><time>3:58</time></li>
@@ -135,29 +112,29 @@
       </div>
     </article>
 
-    <p class="also-note" style="text-align:center;">En 2020, OK VOLCA et Haang Upps unissent leurs forces pour le titre <strong>&laquo;&nbsp;Ouvre toé les yeux&nbsp;&raquo;</strong>.</p>
+    <p class="also-note reveal">En 2020, OK VOLCA et Haang Upps unissent leurs forces pour le titre <strong>&laquo;&nbsp;Ouvre toé les yeux&nbsp;&raquo;</strong>.</p>
   </section>
 
   <section class="section membres" id="membres">
-    <h2 class="display-lg big-heading">Les<br><span>membres</span></h2>
-    <div class="membres__grid">
-      <div class="membre-card"><div class="membre-card__mono">L</div><h3>Louis</h3><p>Chant</p></div>
-      <div class="membre-card"><div class="membre-card__mono">B</div><h3>Ben</h3><p>Chant, guitare</p></div>
-      <div class="membre-card"><div class="membre-card__mono">V</div><h3>Vinz</h3><p>Guitare, effets</p></div>
-      <div class="membre-card"><div class="membre-card__mono">D</div><h3>Doom</h3><p>Batterie</p></div>
-      <div class="membre-card"><div class="membre-card__mono">S</div><h3>Sebas</h3><p>Basse <span class="era">(Éponyme, 2006)</span></p></div>
-      <div class="membre-card"><div class="membre-card__mono">P</div><h3>Pat</h3><p>Basse <span class="era">(Fréquence Trémor, 2011)</span></p></div>
+    <div class="section-head reveal"><span class="section-head__num">03</span><h2 class="display-h1">Les membres</h2></div>
+    <div class="membres__list reveal">
+      <div class="membre-row"><span class="membre-row__name">Louis</span><span class="membre-row__role">Chant</span></div>
+      <div class="membre-row"><span class="membre-row__name">Ben</span><span class="membre-row__role">Chant, guitare</span></div>
+      <div class="membre-row"><span class="membre-row__name">Vinz</span><span class="membre-row__role">Guitare, effets</span></div>
+      <div class="membre-row"><span class="membre-row__name">Doom</span><span class="membre-row__role">Batterie</span></div>
+      <div class="membre-row"><span class="membre-row__name">Sebas</span><span class="membre-row__role">Basse<span class="era">Éponyme, 2006</span></span></div>
+      <div class="membre-row"><span class="membre-row__name">Pat</span><span class="membre-row__role">Basse<span class="era">Fréquence Trémor, 2011</span></span></div>
     </div>
   </section>
 
   <section class="section live" id="live">
-    <h2 class="display-lg big-heading">Sur<br><span>scène</span></h2>
+    <div class="section-head reveal"><span class="section-head__num">04</span><h2 class="display-h1">Sur scène</h2></div>
     <div class="live__grid">
-      <figure class="photo-frame photo-frame--boost blob-photo--a">
-        <img src="img/band-onstage.jpg" alt="OK VOLCA en spectacle, gros plan" loading="lazy">
+      <figure class="parallax parallax--boost reveal" data-parallax>
+        <img src="img/band-onstage.jpg" alt="OK VOLCA en spectacle" loading="lazy">
         <figcaption>OK VOLCA en spectacle</figcaption>
       </figure>
-      <figure class="photo-frame blob-photo--b">
+      <figure class="parallax reveal" data-parallax>
         <img src="img/band-portrait.jpg" alt="Portrait du groupe OK VOLCA" loading="lazy">
         <figcaption>Le groupe</figcaption>
       </figure>
@@ -165,15 +142,16 @@
   </section>
 
   <section class="section contact" id="contact">
-    <h2 class="display-lg big-heading big-heading--center">Contact</h2>
-    <div class="contact-card">
-      <p class="contact-card__lead">Bookings, presse, ou juste pour jaser.</p>
-      <a class="btn btn--accent btn--lg" href="mailto:okvolca@gmail.com">okvolca@gmail.com</a>
-      <div class="contact-card__links">
-        <a href="https://okvolca.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
-        <a href="https://www.facebook.com/okvolca" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://soundcloud.com/okvolca" target="_blank" rel="noopener">SoundCloud</a>
+    <div class="section-head reveal"><span class="section-head__num">05</span><h2 class="display-h1">Contact</h2></div>
+    <p class="eyebrow-text reveal" style="margin-bottom:1rem;">Bookings, presse, ou juste pour jaser</p>
+    <a class="text-link text-link--lg reveal" href="mailto:okvolca@gmail.com">okvolca@gmail.com</a>
+    <div class="contact__row reveal">
+      <div class="contact__links">
+        <a class="text-link" href="https://okvolca.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+        <a class="text-link" href="https://www.facebook.com/okvolca" target="_blank" rel="noopener">Facebook</a>
+        <a class="text-link" href="https://soundcloud.com/okvolca" target="_blank" rel="noopener">SoundCloud</a>
       </div>
+      <span class="eyebrow-text">Saint-Jean-sur-Richelieu, QC</span>
     </div>
   </section>
 
@@ -187,15 +165,12 @@
       <a href="#membres">Membres</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="text-link" href="#top">Retour en haut &uarr;</a>
   </div>
-  <div class="footer__brand">
-    <span class="footer__wordmark">OK VOLCA</span>
-    <a class="footer__arrow" href="#top" aria-label="Retour en haut">&nearr;</a>
-  </div>
-  <p class="footer__tagline">Metal mélodique de Saint-Jean-sur-Richelieu, Québec.</p>
+  <h2 class="footer__wordmark">OK VOLCA</h2>
   <div class="footer__bottom">
     <span>&copy; 2026 OK VOLCA</span>
-    <span>Saint-Jean-sur-Richelieu, QC</span>
+    <span>Metal mélodique, depuis 2005</span>
   </div>
 </footer>
 
