@@ -8,18 +8,20 @@ document.querySelectorAll(".tracklist-toggle").forEach((btn) => {
   });
 });
 
-// Ember particle background
+// Ember particle background (confined to the hero panel)
 (() => {
   const canvas = document.getElementById("embers");
+  const hero = canvas.closest(".hero");
   const ctx = canvas.getContext("2d");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   let width, height, particles;
-  const COLORS = ["255,78,31", "255,140,66", "255,179,71"];
+  const COLORS = ["177,74,49", "191,153,104", "205,190,172"];
 
   function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    const rect = hero.getBoundingClientRect();
+    width = canvas.width = rect.width;
+    height = canvas.height = rect.height;
   }
 
   function makeParticle() {
