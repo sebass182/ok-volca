@@ -1,0 +1,242 @@
+/* =====================================================================
+   OK VOLCA — Design system
+   Reusable, content-agnostic components. Import tokens.css first.
+   Every class here is generic (no band-specific naming) so it can be
+   lifted into another project as-is. See style-guide.html for a
+   rendered reference of every component below.
+   ===================================================================== */
+
+*{box-sizing:border-box;}
+
+body{
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--c-ink);
+  background: var(--c-bg);
+  line-height: 1.65;
+}
+
+/* ---------- Typography ---------- */
+
+.eyebrow-text{
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.display-xl{
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-variation-settings: "WONK" 1, "SOFT" 20;
+  font-size: var(--fs-hero);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+
+.display-lg{
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-variation-settings: "WONK" 1, "SOFT" 20;
+  font-size: var(--fs-h1);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+.display-lg span{
+  display: block;
+  margin-left: 0.9em;
+}
+
+.display-md{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-sm);
+  padding: 0.9rem 1.8rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--c-ink);
+  background: var(--c-surface);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow-card); }
+
+.btn--accent{
+  background: var(--c-accent);
+  border-color: var(--c-border);
+  color: var(--c-accent-ink);
+}
+
+.btn--outline-panel{
+  background: transparent;
+  border-color: var(--c-on-panel);
+  color: var(--c-on-panel);
+}
+.btn--outline-panel:hover{ background: var(--c-on-panel); color: var(--c-panel); }
+
+.btn--lg{ padding: 1.1rem 2.4rem; font-size: 1.05rem; }
+
+/* ---------- Pills / tabs ---------- */
+
+.pill{
+  display: inline-block;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-sm);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--c-surface);
+}
+
+.tabs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.tab{
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-sm);
+  background: var(--c-surface);
+  color: var(--c-ink);
+  padding: 0.65rem 1.3rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.tab.active{ background: var(--c-accent); }
+
+/* ---------- Chips (scattered logo/wordmark cards) ---------- */
+
+.chip{
+  display: inline-block;
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-sm);
+  padding: 0.7rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--c-ink-soft);
+}
+
+/* ---------- Ticker marquee ---------- */
+
+.ticker{
+  background: var(--c-accent);
+  color: var(--c-accent-ink);
+  overflow: hidden;
+  border-top: 1.5px solid var(--c-border);
+  border-bottom: 1.5px solid var(--c-border);
+}
+.ticker__track{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  white-space: nowrap;
+  width: max-content;
+  padding: 0.9rem 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  animation: ticker-scroll 22s linear infinite;
+}
+.ticker__mark{ font-size: 0.9em; }
+
+@keyframes ticker-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* ---------- Cards ---------- */
+
+.card{
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+
+/* Sticky-note style stat card, meant to sit in a loosely rotated row */
+.note{
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-md);
+  padding: 1.4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  transition: transform 0.25s ease;
+}
+.note:hover{ transform: translateY(-4px) rotate(0deg) !important; }
+.note--accent{ background: var(--c-accent); }
+.note__num{ font-family: var(--font-display); font-weight: 900; font-size: 2.2rem; }
+.note__label{ font-size: 0.92rem; color: var(--c-ink-soft); }
+.note--accent .note__label{ color: var(--c-accent-ink); }
+
+/* ---------- Photo frame: grayscale -> color on hover ---------- */
+
+.photo-frame{
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--r-photo);
+  margin: 0;
+}
+.photo-frame img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.05);
+  transform: scale(1.01);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+.photo-frame:hover img{
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.04);
+}
+.photo-frame figcaption{
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* ---------- List rows (year / label / divider) ---------- */
+
+.list-row{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.3rem 0;
+  border-bottom: 1.5px solid var(--c-border-soft);
+}
+.list-row:last-child{ border-bottom: none; }
